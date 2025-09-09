@@ -12,5 +12,7 @@ public class ContaPoupanca extends Conta {
         double juros = this.saldo * this.taxaDeJuros;
         this.saldo += juros;
         System.out.println("Juros de R$ " + String.format("%.2f", juros) + " renderam na conta " + this.numero);
+        this.saldo += juros;
+        System.out.println("Juros de R$" + String.format("%.2f",juros)+ "rederam na conta" + this.numero);
     }
 }
