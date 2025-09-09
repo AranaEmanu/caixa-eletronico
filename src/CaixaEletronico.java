@@ -113,7 +113,7 @@ public class CaixaEletronico {
                         break;
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Erro: Por favor, digite apenas números.");
+                System.out.println("Erro: Por favor, digite apenas números .");
                 scanner.next();
             }
         }
