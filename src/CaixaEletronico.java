@@ -53,7 +53,7 @@ public class CaixaEletronico {
                         break;
                     case 2:
                         System.out.print("Digite o valor para depositar: ");
-                        contaAtiva.depositar(scanner, nextDouble());
+                        contaAtiva.depositar(scanner.nextDouble());
                         break;
                     case 3:
                         System.out.print("Digite o valor para sacar: ");
@@ -62,8 +62,8 @@ public class CaixaEletronico {
                     case 4:
                         System.out.print("Digite o número da conta destino: ");
                         int numContaDestino = scanner.nextInt();
-                        Conta contaDeDestino = null;
-                        for (Conta c : contaDoBanco) if (c.getNumero() == numContaDestino) numContaDestino = c;
+                        Conta contaDestino = null;
+                        for (Conta c : contasDoBanco) if (c.getNumero() == numContaDestino) contaDestino = c;
 
                         if (contaDestino != null && contaDestino != contaAtiva) {
                             System.out.print("Digite o valor para transferir: ");
@@ -76,7 +76,7 @@ public class CaixaEletronico {
                     case 5:
                         System.out.println("\n--- CONTAS DISPONÍVEIS ---");
                         for (Conta c : contasDoBanco) {
-                            System.out.println("N° " + c.getNumero() + " - " + getClass().getSimpleName() + " - " + c.getNomeTitular());
+                            System.out.println("N° " + c.getNumero() + " - " + c.getClass().getSimpleName() + " - " + c.getNomeTitular());
                         }
                         System.out.print("Digite o número da conta desejada: ");
                         int numContaLogin = scanner.nextInt();
